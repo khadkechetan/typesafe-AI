@@ -1,0 +1,518 @@
+{
+  "config": {
+    "run_id": "20260920T193741Z",
+    "poc_version": "1.0.0",
+    "dataset": "naver-clova-ix/cord-v2",
+    "split": "test",
+    "offset": 0,
+    "n_documents": 3,
+    "doc_ids": [
+      "test-0",
+      "test-1",
+      "test-2"
+    ],
+    "models": [
+      "openai/gpt-oss-20b"
+    ],
+    "judge_model": "jev-latest",
+    "judge_model_served": "jev-1.13.0",
+    "judge_skipped": false,
+    "threshold": 0.75,
+    "correct_on": "non-pass",
+    "repeats": 1,
+    "seed": 42,
+    "started_at": "2026-09-20T19:37:41+00:00",
+    "finished_at": "2026-09-20T19:38:31+00:00",
+    "versions": "python 3.11.14",
+    "judge_usage": {
+      "input_tokens": 11949,
+      "output_tokens": 2723
+    }
+  },
+  "accuracy_before": {
+    "n_slots": 36,
+    "n_present": 21,
+    "exact": 0.9166666666666666,
+    "normalized": 0.9166666666666666,
+    "exact_present_only": 0.8571428571428571,
+    "normalized_present_only": 0.8571428571428571
+  },
+  "accuracy_after": {
+    "n_slots": 36,
+    "n_present": 21,
+    "exact": 0.9166666666666666,
+    "normalized": 0.9166666666666666,
+    "exact_present_only": 0.8571428571428571,
+    "normalized_present_only": 0.8571428571428571
+  },
+  "accuracy_bounds": {
+    "automation_only": 0.9166666666666666,
+    "oracle_review": 0.9722222222222222,
+    "n": 36
+  },
+  "judge_metrics": {
+    "n_judged": 36,
+    "n_decided": 30,
+    "true_positives": 0,
+    "false_positives": 0,
+    "false_negatives": 1,
+    "true_negatives": 29,
+    "correct_errors_detected": 0,
+    "correct_values_incorrectly_rejected": 0,
+    "incorrect_values_incorrectly_accepted": 1,
+    "fields_routed_to_manual_review": 6,
+    "review_rate": 0.16666666666666666,
+    "total_actual_errors": 3,
+    "precision": null,
+    "recall": 0.0,
+    "f1": null,
+    "recall_all_rows": 0.0,
+    "f1_all_rows": null,
+    "false_automation_rate": 0.03333333333333333
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.0,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.05,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.1,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.15,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.2,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.25,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.3,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.0,
+      "false_automation_rate": 0.027777777777777776,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 36
+    },
+    {
+      "threshold": 0.35,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.027777777777777776,
+      "false_automation_rate": 0.02857142857142857,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 35
+    },
+    {
+      "threshold": 0.4,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.027777777777777776,
+      "false_automation_rate": 0.02857142857142857,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 35
+    },
+    {
+      "threshold": 0.45,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.05555555555555555,
+      "false_automation_rate": 0.029411764705882353,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 34
+    },
+    {
+      "threshold": 0.5,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.05555555555555555,
+      "false_automation_rate": 0.029411764705882353,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 34
+    },
+    {
+      "threshold": 0.55,
+      "accuracy_automation_only": 0.9722222222222222,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.05555555555555555,
+      "false_automation_rate": 0.029411764705882353,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "n_decided": 34
+    },
+    {
+      "threshold": 0.6,
+      "accuracy_automation_only": 0.9444444444444444,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.08333333333333333,
+      "false_automation_rate": 0.030303030303030304,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "n_decided": 33
+    },
+    {
+      "threshold": 0.65,
+      "accuracy_automation_only": 0.9444444444444444,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.1111111111111111,
+      "false_automation_rate": 0.03125,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "n_decided": 32
+    },
+    {
+      "threshold": 0.7,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.16666666666666666,
+      "false_automation_rate": 0.03333333333333333,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "n_decided": 30
+    },
+    {
+      "threshold": 0.75,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.16666666666666666,
+      "false_automation_rate": 0.03333333333333333,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "n_decided": 30
+    },
+    {
+      "threshold": 0.8,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.19444444444444445,
+      "false_automation_rate": 0.034482758620689655,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "n_decided": 29
+    },
+    {
+      "threshold": 0.85,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.3055555555555556,
+      "false_automation_rate": 0.04,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "n_decided": 25
+    },
+    {
+      "threshold": 0.9,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 0.9722222222222222,
+      "review_rate": 0.4166666666666667,
+      "false_automation_rate": 0.047619047619047616,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "n_decided": 21
+    },
+    {
+      "threshold": 0.95,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 1.0,
+      "review_rate": 0.5833333333333334,
+      "false_automation_rate": 0.0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "n_decided": 15
+    },
+    {
+      "threshold": 1.0,
+      "accuracy_automation_only": 0.9166666666666666,
+      "accuracy_oracle_review": 1.0,
+      "review_rate": 0.8611111111111112,
+      "false_automation_rate": 0.0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "n_decided": 5
+    }
+  ],
+  "best_threshold": {
+    "threshold": 0.0,
+    "accuracy_automation_only": 0.9722222222222222,
+    "accuracy_oracle_review": 0.9722222222222222,
+    "review_rate": 0.0,
+    "false_automation_rate": 0.027777777777777776,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8,
+    "n_decided": 36
+  },
+  "calibration": [
+    {
+      "bin": "[0.00, 0.50)",
+      "n": 2,
+      "mean_confidence": 0.375,
+      "observed_correct": 1.0
+    },
+    {
+      "bin": "[0.50, 0.60)",
+      "n": 1,
+      "mean_confidence": 0.56,
+      "observed_correct": 1.0
+    },
+    {
+      "bin": "[0.60, 0.70)",
+      "n": 3,
+      "mean_confidence": 0.65,
+      "observed_correct": 1.0
+    },
+    {
+      "bin": "[0.70, 0.75)",
+      "n": 0,
+      "mean_confidence": null,
+      "observed_correct": null
+    },
+    {
+      "bin": "[0.75, 0.80)",
+      "n": 1,
+      "mean_confidence": 0.75,
+      "observed_correct": 1.0
+    },
+    {
+      "bin": "[0.80, 0.90)",
+      "n": 8,
+      "mean_confidence": 0.8475,
+      "observed_correct": 1.0
+    },
+    {
+      "bin": "[0.90, 0.95)",
+      "n": 6,
+      "mean_confidence": 0.91,
+      "observed_correct": 0.8333333333333334
+    },
+    {
+      "bin": "[0.95, 1.00)",
+      "n": 15,
+      "mean_confidence": 0.986,
+      "observed_correct": 1.0
+    }
+  ],
+  "by_field": [
+    {
+      "field": "menu.first_item_cnt",
+      "n": 3,
+      "acc_before_norm": 0.6666666666666666,
+      "acc_after_norm": 0.6666666666666666,
+      "n_errors": 1,
+      "n_review": 1,
+      "mean_judge_confidence": 0.7733333333333334
+    },
+    {
+      "field": "menu.first_item_name",
+      "n": 3,
+      "acc_before_norm": 0.6666666666666666,
+      "acc_after_norm": 0.6666666666666666,
+      "n_errors": 1,
+      "n_review": 0,
+      "mean_judge_confidence": 0.9633333333333334
+    },
+    {
+      "field": "menu.first_item_price",
+      "n": 3,
+      "acc_before_norm": 0.6666666666666666,
+      "acc_after_norm": 0.6666666666666666,
+      "n_errors": 1,
+      "n_review": 1,
+      "mean_judge_confidence": 0.81
+    },
+    {
+      "field": "sub_total.discount_price",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 1,
+      "mean_judge_confidence": 0.8333333333333334
+    },
+    {
+      "field": "sub_total.service_price",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 0,
+      "mean_judge_confidence": 0.8733333333333334
+    },
+    {
+      "field": "sub_total.subtotal_price",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 1,
+      "mean_judge_confidence": 0.7166666666666667
+    },
+    {
+      "field": "sub_total.tax_price",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 1,
+      "mean_judge_confidence": 0.8366666666666666
+    },
+    {
+      "field": "total.cashprice",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 0,
+      "mean_judge_confidence": 0.9466666666666667
+    },
+    {
+      "field": "total.changeprice",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 0,
+      "mean_judge_confidence": 0.9133333333333334
+    },
+    {
+      "field": "total.creditcardprice",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 0,
+      "mean_judge_confidence": 0.96
+    },
+    {
+      "field": "total.menuqty_cnt",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 1,
+      "mean_judge_confidence": 0.7733333333333333
+    },
+    {
+      "field": "total.total_price",
+      "n": 3,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 0,
+      "mean_judge_confidence": 0.9466666666666667
+    }
+  ],
+  "by_document": [
+    {
+      "doc_id": "test-0",
+      "n": 12,
+      "acc_before_norm": 0.75,
+      "acc_after_norm": 0.75,
+      "n_errors": 3,
+      "n_review": 3,
+      "mean_judge_confidence": 0.8058333333333333
+    },
+    {
+      "doc_id": "test-1",
+      "n": 12,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 1,
+      "mean_judge_confidence": 0.9008333333333334
+    },
+    {
+      "doc_id": "test-2",
+      "n": 12,
+      "acc_before_norm": 1.0,
+      "acc_after_norm": 1.0,
+      "n_errors": 0,
+      "n_review": 2,
+      "mean_judge_confidence": 0.88
+    }
+  ],
+  "by_model": [
+    {
+      "model": "openai/gpt-oss-20b",
+      "n": 36,
+      "acc_before_norm": 0.9166666666666666,
+      "acc_after_norm": 0.9166666666666666,
+      "n_errors": 3,
+      "n_review": 6,
+      "mean_judge_confidence": 0.8622222222222222
+    }
+  ],
+  "stability": null
+}

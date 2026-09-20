@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------
+# Credentials — NEVER commit these.
+# Only .env.example (placeholders) belongs in version control.
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.*
+
+# ---------------------------------------------------------------
+# Virtual environment / Python build artefacts
+# ---------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+
+# ---------------------------------------------------------------
+# Caches
+# ---------------------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.cache/
+
+# Hugging Face dataset cache, if it ever lands in-tree
+.huggingface/
+huggingface/
+
+# ---------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
