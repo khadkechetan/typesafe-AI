@@ -81,7 +81,7 @@ similar, rename it — `--check-credentials` will tell you.
 
 ## TypeSafe capability limitations
 
-**This is the most important section.** `POC.md` asked the judge for four things per field.
+**This is the most important section.** [`docs/POC.md`](docs/POC.md) asked the judge for four things per field.
 Jev can natively provide two of them. The other two required documented adaptations, because
 Jev **emits no text at all** — its own docs state that `jev-1.13`
 ["is not trained to generate text"](https://docs.typesafe.ai/model-jaggedness/jev-1.13).
@@ -206,12 +206,31 @@ aborts before any spend.
 ## Files
 
 ```
-run_poc.py         the entire POC
+run_poc.py         thin CLI entry point -> typesafe_poc.cli.main()
+typesafe_poc/       the POC implementation, one module per concern
+  constants.py        schema, enums and tunables
+  credentials.py       env credential loading + secret redaction
+  models.py             dataclasses that flow through the pipeline
+  dataset.py             CORD-v2 loading and OCR reconstruction
+  normalize.py            value normalization and match comparisons
+  extraction.py            NVIDIA (OpenAI-compatible) field extraction
+  judging.py                TypeSafe (Jev) field validation
+  decision.py                accept / correct / mismatch / review logic
+  metrics.py                  accuracy, judge-performance, calibration
+  reporting.py                  CSV/JSON writers and the markdown report
+  selfcheck.py                   offline assertions, no API calls
+  pipeline.py                     per-document orchestration + stability
+  cli.py                           argument parsing and main()
 requirements.txt
 .env.example
 README.md
+docs/               inputs and background, not part of the deliverable
+  POC.md              the brief this POC was built against
+  Task.md              the original task description
+  TypeSafe-vs-LLM-Report.md   prior background research
+  linkedin-post.md      write-up drafted from this run's results
 results/           generated output
 ```
 
-`POC.md` (the brief) and `TypeSafe-vs-LLM-Report.md` (prior background research) are inputs,
-not part of the deliverable.
+[`docs/POC.md`](docs/POC.md) (the brief) and [`docs/TypeSafe-vs-LLM-Report.md`](docs/TypeSafe-vs-LLM-Report.md)
+(prior background research) are inputs, not part of the deliverable.
