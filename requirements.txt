@@ -1,21 +1,4 @@
-# TypeSafe LLM-as-a-Judge POC — Python 3.11+
-#
-# Versions below are minimum floors verified against PyPI on 2026-09-20.
-
-# TypeSafe AI official Python SDK (System One / Jev).
-# Docs: https://docs.typesafe.ai/sdk/python/usage
 typesafe-sdk>=0.7.0
-
-# NVIDIA-hosted LLMs are served over an OpenAI-compatible API.
-# NVIDIA's own reference uses the `openai` client against
-# https://integrate.api.nvidia.com/v1 — no proprietary client is required.
 openai>=1.40.0
-
-# Hugging Face datasets. NOTE: datasets >= 4.0 removed `trust_remote_code`
-# and script-based loading. naver-clova-ix/cord-v2 is pure parquet, so it
-# loads without either.
 datasets>=2.20.0
-
-# Loads .env into the environment. Credentials are still only ever read
-# from os.environ — see load_credentials() in run_poc.py.
 python-dotenv>=1.0.0
